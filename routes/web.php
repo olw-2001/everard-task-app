@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostsController;
+use App\Http\Controllers\PartsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,8 @@ use App\Http\Controllers\PostsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route to the controlller
+Route::get('/', [PartsController::class, 'index']);
 
-Route::get('/parts', [PostsController::class, 'index']);
+// Retrieves database data
+Route::get('view-records', 'PartsController@index');
