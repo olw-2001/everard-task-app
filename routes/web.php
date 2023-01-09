@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PartsController;
+use App\Http\Controllers\PartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,5 @@ use App\Http\Controllers\PartsController;
 |
 */
 
-// Route to the controlller
-Route::get('/', [PartsController::class, 'index']);
-
-// Retrieves database data
-Route::get('view-records', 'PartsController@index');
+// Route to the controlller function that returns the view blade
+Route::get('/', [PartController::class, 'retView']);

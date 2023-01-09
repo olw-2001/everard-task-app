@@ -3,8 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="./css/app.css"> -->
 
-        <title>Everard task</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
         @vite(['resources/js/app.js', 'resources/css/app.css'])
         
@@ -12,26 +14,6 @@
 
     <body class="antialiased">
         <div id="app"></div>
-        <table>
-            <tr>
-                <td>ID</td>
-                <td>Part number</td>
-                <td>Part description</td>
-                <td>Stock quantity</td>
-                <td>Created at</td>
-                <td>Updated at</td>
-            </tr>
-            @foreach ($parts as $part)
-                <tr>
-                    <td>{{ $part->id }}</td>
-                    <td>{{ $part->part_number }}</td>
-                    <td>{{ $part->part_description }}</td>
-                    <td>{{ $part->stock_quantity }}</td>
-                    <td>{{ $part->created_at }}</td>
-                    <td>{{ $part->updated_at }}</td>
-                </tr>
-            @endforeach
-        </table>
     </body>
 
 </html>
