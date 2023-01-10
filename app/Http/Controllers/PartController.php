@@ -9,14 +9,33 @@ use DB;
 
 class PartController extends Controller
 {
+    // Fetches the data from the database and returns the view with that data
     public function index() {
-        return part::all();
-        // $part = DB::select('select * from parts');
-        /*, ['parts' => $part]*/
-        //return view('parts/index', ['part' => $part]);
+        $part = DB::select('select * from parts');
+        return view('parts/index', ['parts' => $part]);
     }
 
-    public function retView() {
-        return view('parts/index');
+    // Inserting data into the database
+    public function insPart(Request $request) {
+
+        $part = new Part;
+
+        $part->part_number = $request->partNum;
+        $part->stock_quantity = $request->partQuantity;
+        $part->part_description = $request->partDesc;
+
+        $part->save();
+        return redirect()->back();
+    }
+
+    // Deleting data from database
+    public function delete($id) {
+        $parts = Part::find($id);
+        $parts->delete();
+        return redirect()->back();
+    }
+
+    public function update($id) {
+        return redirect()->back();
     }
 }

@@ -9,11 +9,12 @@ class Part extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'part_number',
         'part_description',
         'stock_quantity'
     ];
-
     
 }
