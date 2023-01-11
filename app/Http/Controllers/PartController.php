@@ -7,8 +7,7 @@ use App\Models\Part;
 
 use DB;
 
-class PartController extends Controller
-{
+class PartController extends Controller {
     // Fetches the data from the database and returns the view with that data
     public function index() {
         $part = DB::select('select * from parts');
@@ -35,7 +34,15 @@ class PartController extends Controller
         return redirect()->back();
     }
 
-    public function update($id) {
+    public function update(Request $request, $id) {
+
+        $part = Part::findOrfail($id);
+        $part->part_number = $request->partNum;
+        $part->stock_quantity = $request->partQuantity;
+        $part->part_description = $request->partDesc;
+
+        $part->save();
         return redirect()->back();
     }
+    
 }

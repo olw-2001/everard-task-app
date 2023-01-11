@@ -1,8 +1,12 @@
 body {
     font-family: 'Courier New', Courier, monospace;
 }
+h1 {
+    font-family: termina, sans-serif;
+    font-weight: 400;
+}
 .container {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .btn {
     transition: none !important;

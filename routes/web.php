@@ -22,4 +22,5 @@ Route::post('insPartData', [PartController::class, 'insPart']);
 
 // Deleting data
 Route::get('delete/{id}', [PartController::class, 'delete']);
-Route::get('update/{id}', [PartController::class, 'update']);
+
+Route::post("update", [PartController::class, 'update']);

@@ -22,8 +22,9 @@
 
     <body class="antialiased">
         <div class="container">
+            <h1 class="text-center mb-5">Everard parts manager</h1>
             <div class="row">
-                <table class="table text-center">
+                <table class="table text-center mt-5">
                     <thread>
                         <tr>
                             <th scope="col">ID</th>
@@ -49,10 +50,10 @@
                             <td>
                                 <button data-bs-target="#editPartModal" type="button" class="btn btn-dark rounded-0" data-bs-toggle="modal">Edit</button>
                                 <button data-bs-target="#deletePartModal" type="button" class="btn btn-danger rounded-0" data-bs-toggle="modal">Delete part</button>
-                                @include('parts/delete')
-                                @include('parts/edit')
 				            </td>
                         </tr>
+                        @include('parts/delete')
+                        @include('parts/edit')
                         @endforeach
                     </tbody>
                 </table>
@@ -90,5 +91,7 @@
                     </div>
                 </div>
             </div>
+
+        </div>
     </body>
 </html>
