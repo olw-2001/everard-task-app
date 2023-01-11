@@ -8,7 +8,7 @@
 
             <div class="modal-body">					
         	    <p class="text-start"><b>Warning!</b> you are about to delete this part from the database. Are you sure you want to continue?</p>
-        	    <p class="text-danger animate__animated animate__flash animate__faster"><b>This action cannot be undone.</b></p>
+        	    <p class="text-danger animate__animated animate__flash animate__faster text-center"><b>This action cannot be undone.</b></p>
         	</div>
 
             <div class="modal-footer">

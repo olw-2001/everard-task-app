@@ -34,7 +34,7 @@
                             <th scope="col">Created at</th>
                             <th scope="col">Updated at</th>
                             <th>
-                            <button data-bs-target="#addPartModal" type="button" class="btn btn-dark rounded-0" data-bs-toggle="modal">Create new part</button>
+                                <button data-bs-target="#addPartModal" type="button" class="btn btn-dark rounded-0 mb-2" data-bs-toggle="modal">Create new part</button>
                             </th>
                         </tr>
                     </thead>
@@ -66,7 +66,7 @@
                             <h4>Create part</h4>
                         </div>
 
-                        <form action="insPartData" method="POST">
+                        <form>
                             @csrf
                             <div class="p-3">
                                 <label for="addPartForm" class="form-label">Part number</label>
@@ -91,7 +91,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </body>
 </html>

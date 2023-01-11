@@ -6,7 +6,7 @@
                 <h4>Update part</h4>
             </div>
 
-            <form action="update" method="POST">
+            <form action="update" method="PATCH">
                 @csrf
                 <div class="p-3">
                     <label for="editPartForm" class="form-label">Part number</label>

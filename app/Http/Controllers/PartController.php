@@ -34,7 +34,7 @@ class PartController extends Controller {
         return redirect()->back();
     }
 
-    public function update(Request $request, $id) {
+    public function updateData(Request $request, $id) {
 
         $part = Part::findOrfail($id);
         $part->part_number = $request->partNum;

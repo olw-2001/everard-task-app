@@ -20,7 +20,8 @@ Route::get('/', [PartController::class, 'index']);
 // Inserting data
 Route::post('insPartData', [PartController::class, 'insPart']);
 
+// Would've been for updating data, but couldn't get it working 
+// Route::get("update", [PartController::class, 'updateData']);
+
 // Deleting data
 Route::get('delete/{id}', [PartController::class, 'delete']);
-
-Route::post("update", [PartController::class, 'update']);
