@@ -6,21 +6,21 @@
                 <h4>Update part</h4>
             </div>
 
-            <form action="update" method="PATCH">
+            <form>
                 @csrf
                 <div class="p-3">
                     <label for="editPartForm" class="form-label">Part number</label>
-                    <input type="text" class="form-control rounded-0" id="editPartForm" name="partNum" value="{{ $part->part_number }}">
+                    <input type="text" class="form-control rounded-0" id="editPartForm" name="partNum">
                 </div>
 
                 <div class="p-3">
                     <label for="editQuantityForm" class="form-label">Stock quantity</label>
-                    <input type="text" class="form-control rounded-0" id="editQuantityForm" name="partQuantity" value="{{ $part->stock_quantity }}">
+                    <input type="text" class="form-control rounded-0" id="editQuantityForm" name="partQuantity">
                 </div>
 
                 <div class="p-3">
                     <label for="editDescForm" class="form-label">Part description</label>
-                    <textarea id="editDescForm" class="form-control rounded-0" name="partDesc">{{ $part->part_description }}</textarea>
+                    <textarea id="editDescForm" class="form-control rounded-0" name="partDesc"></textarea>
                 </div>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end p-3 mb-3">

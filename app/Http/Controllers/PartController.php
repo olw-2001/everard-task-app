@@ -29,9 +29,11 @@ class PartController extends Controller {
 
     // Deleting data from database
     public function delete($id) {
+
         $parts = Part::find($id);
         $parts->delete();
         return redirect()->back();
+        
     }
 
     public function updateData(Request $request, $id) {

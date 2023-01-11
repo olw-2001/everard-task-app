@@ -22,7 +22,7 @@
 
     <body class="antialiased">
         <div class="container">
-            <h1 class="text-center mb-5">Everard parts manager</h1>
+            <h1 class="text-center mb-5">EVERARD part management</h1>
             <div class="row">
                 <table class="table text-center mt-5">
                     <thread>
@@ -66,7 +66,7 @@
                             <h4>Create part</h4>
                         </div>
 
-                        <form>
+                        <form action="insPartData" method="POST">
                             @csrf
                             <div class="p-3">
                                 <label for="addPartForm" class="form-label">Part number</label>
